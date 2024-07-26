@@ -19,6 +19,13 @@ sudo systemctl restart xrdp
 sudo ufw allow 3389/tcp
 #################################
 
+
+## 1.1 Update root ##
+#################################
+sudo su -
+sudo passwd root
+#################################
+
 #
 
 ## 2. Optional ##
