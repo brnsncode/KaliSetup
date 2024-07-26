@@ -66,6 +66,12 @@ sudo nano /etc/gdm3/daemon.conf
 #Enabling Automatic Login
 #AutomaticLoginEnable = true
 #AutomaticLogin = root or set to whatver user you want
+#AllowRoot = true
+
+#next add to /etc/pam.d/gdm-password
+sudo nano /etc/pam.d/gdm-password
+#On the third line of the text, where it says auth required pam_succeed_If, insert a # to begin the line. The text should look like what we have below.
+#auth  required  pam_suceed_if.so user != root quite_success
 #################################
 
 #
