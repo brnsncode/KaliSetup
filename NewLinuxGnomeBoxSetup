@@ -102,6 +102,8 @@ curl 10.10.10.10/whoami
 # turn off screen dimming
 # set Automatic Suspend to Off
 # Set power button behaviour to "Nothing"
+# turn on extensions
+# if using 4k display on laptop, set resolution to 2560x1440 for optimal viewing
 #################################
 
 ##
