@@ -11,7 +11,9 @@ sudo apt update
 sudo apt upgrade
 sudo apt install xrdp
 
+#sets xrdp to run at startup
 sudo systemctl enable xrdp
+
 sudo systemctl restart xrdp
 
 sudo ufw allow 3389/tcp
