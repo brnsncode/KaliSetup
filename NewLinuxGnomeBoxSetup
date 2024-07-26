@@ -1,6 +1,9 @@
-#kali Linux setup
+## 0. Info ##
+#################################
+# Kali Linux setup
 
 #Main goal, create commands and scripts for easy replication
+#################################
 
 ## 1. Update ##
 #################################
@@ -14,7 +17,7 @@ sudo systemctl restart xrdp
 sudo ufw allow 3389/tcp
 #################################
 
-
+#
 
 ## 2. Optional ##
 #################################
@@ -25,6 +28,7 @@ sudo ufw allow 3389/tcp
 #systemctl restart ssh
 #################################
 
+#
 
 ## 3. Multi Login Setup ##
 #################################
@@ -35,6 +39,8 @@ sudo nano /etc/xrdp/startwm.sh
 unset DBUS_SESSION_BUS_ADDRESS
 unset XDG_RUNTIME_DIR
 #################################
+
+#
 
 ## 4. Enable Auto Logins ##
 #################################
@@ -52,6 +58,7 @@ sudo nano /etc/gdm3/daemon.conf
 #AutomaticLogin = root
 #################################
 
+#
 
 ## 5. Setup machine for TryHackMe Vpn ##
 #################################
@@ -62,6 +69,7 @@ sudo OpenVPN ~/Downloads/Antid0te.vpn
 curl 10.10.10.10/whoami
 #################################
 
+#
 
 ## 6. Reboot ##
 #################################
