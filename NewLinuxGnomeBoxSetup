@@ -22,6 +22,7 @@ sudo ufw allow 3389/tcp
 
 ## 1.1 Update root ##
 #################################
+# https://linuxconfig.org/how-to-reset-kali-linux-root-password
 sudo su -
 sudo passwd root
 #################################
