@@ -60,7 +60,18 @@ sudo nano /etc/gdm3/daemon.conf
 
 #
 
-## 5. Setup machine for TryHackMe Vpn ##
+## 5. Prevent turning off/sleeping on idle or after closing Laptop Lid ##|
+#################################
+#https://www.dell.com/support/kbdoc/en-ca/000179566/how-to-disable-sleep-and-configure-lid-power-settings-for-ubuntu-or-red-hat-enterprise-linux-7
+sudo nano /etc/systemd/logind.conf
+
+#set HandleLidSwitchExternalPower to "ignore"
+#set 
+#################################
+
+##
+
+## 6. Setup machine for TryHackMe Vpn ##
 #################################
 #setup tryhackme openvpn
 sudo OpenVPN ~/Downloads/Antid0te.vpn
@@ -69,9 +80,17 @@ sudo OpenVPN ~/Downloads/Antid0te.vpn
 curl 10.10.10.10/whoami
 #################################
 
-#
+## 8. Manual Setups ##
+#################################
+#set power management to High performance
+# turn off screen dimming
+# set Automatic Suspend to Off
+# Set power button behaviour to "Nothing"
+#################################
 
-## 6. Reboot ##
+##
+
+## 7. Reboot ##
 #################################
 #Finally reboot
 reboot
