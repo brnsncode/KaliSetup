@@ -7,8 +7,8 @@
 
 ## 1. Update ##
 #################################
-sudo apt update
-sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt install xrdp
 
 #sets xrdp to run at startup
