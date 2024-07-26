@@ -1,0 +1,70 @@
+#kali Linux setup
+
+#Main goal, create commands and scripts for easy replication
+
+## 1. Update ##
+#################################
+sudo apt update
+sudo apt upgrade
+sudo apt install xrdp
+
+sudo systemctl enable xrdp
+sudo systemctl restart xrdp
+
+sudo ufw allow 3389/tcp
+#################################
+
+
+
+## 2. Optional ##
+#################################
+# in /etc/ssh/sshd_config, set the following:
+#PasswordAuthentication no
+
+# Then reload the daemon
+#systemctl restart ssh
+#################################
+
+
+## 3. Multi Login Setup ##
+#################################
+#setup multi login
+sudo nano /etc/xrdp/startwm.sh
+
+#add the 2 lines before test-x /etc/x11/xsession etc.....
+unset DBUS_SESSION_BUS_ADDRESS
+unset XDG_RUNTIME_DIR
+#################################
+
+## 4. Enable Auto Logins ##
+#################################
+#enable auto login
+#First confirm that your Kali Linux is set to use GDM3 as a default display manager:
+cat /etc/X11/default-display-manager
+#result should be: /usr/sbin/gdm3
+
+#Then edit: /etc/gdm3/daemon.conf
+sudo nano /etc/gdm3/daemon.conf
+
+#uncomment or add these lines under:
+#Enabling Automatic Login
+#AutomaticLoginEnable = true
+#AutomaticLogin = root
+#################################
+
+
+## 5. Setup machine for TryHackMe Vpn ##
+#################################
+#setup tryhackme openvpn
+sudo OpenVPN ~/Downloads/Antid0te.vpn
+
+#check if youre connected
+curl 10.10.10.10/whoami
+#################################
+
+
+## 6. Reboot ##
+#################################
+#Finally reboot
+reboot
+#################################
