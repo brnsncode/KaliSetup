@@ -57,7 +57,7 @@ sudo nano /etc/gdm3/daemon.conf
 #uncomment or add these lines under:
 #Enabling Automatic Login
 #AutomaticLoginEnable = true
-#AutomaticLogin = root
+#AutomaticLogin = root or set to whatver user you want
 #################################
 
 #
