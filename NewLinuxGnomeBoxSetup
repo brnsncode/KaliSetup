@@ -104,6 +104,20 @@ curl 10.10.10.10/whoami
 # Set power button behaviour to "Nothing"
 # turn on extensions
 # if using 4k display on laptop, set resolution to 2560x1440 for optimal viewing
+
+#For the benefit of others who may encounter a similar issue, here is a more detailed explanation of the steps you've taken:
+#
+#    Open the "Settings Editor" in XFCE. You can find it by searching for "Settings Editor" in the application menu or running xfce4-settings-editor from the terminal.
+#
+#    In the "Settings Editor," navigate to "xfce4-power-manager" in the left pane.
+#
+#    In the right pane, locate the "dpms-enabled" option.
+#
+#    Uncheck the box next to "dpms-enabled" to disable it.
+#
+#    Close the "Settings Editor" and test to see if the screen still blanks after 10 minutes of inactivity.
+
+
 #################################
 
 ##
