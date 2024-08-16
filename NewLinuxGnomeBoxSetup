@@ -59,6 +59,7 @@ unset XDG_RUNTIME_DIR
 cat /etc/X11/default-display-manager
 #result should be: /usr/sbin/gdm3
 
+#if using gnome use this:
 #Then edit: /etc/gdm3/daemon.conf
 sudo nano /etc/gdm3/daemon.conf
 
@@ -67,6 +68,14 @@ sudo nano /etc/gdm3/daemon.conf
 #AutomaticLoginEnable = true
 #AutomaticLogin = root or set to whatver user you want
 #AllowRoot = true
+
+#if using xfce, use this:
+#Then edit: /etc/lightdm/lightdm.conf
+sudo nano /etc/lightdm/lightdm.conf
+
+#set auto login to whichever user
+#uncomment or add these lines under [Seat:*]:
+autologin-user=mnmldev
 
 #next add to /etc/pam.d/gdm-password
 sudo nano /etc/pam.d/gdm-password
